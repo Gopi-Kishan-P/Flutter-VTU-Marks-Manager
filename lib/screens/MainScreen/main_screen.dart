@@ -19,6 +19,7 @@ class _MainScreenState extends State<MainScreen> {
 
   void toggleTheme() {
     Provider.of<Data>(context, listen: false).toggleDarkMode();
+    MediaQuery.of(context).platformBrightness = Brightness.dark;
   }
 
   Color get purpleTextColor {
@@ -55,7 +56,7 @@ class _MainScreenState extends State<MainScreen> {
         title: Text(
           'Welcome Gopi Kishan P',
           style: TextStyle(
-            color: purpleTextColor,
+            color: Theme.of(context).colorScheme.purpleFg,
           ),
         ),
         elevation: 0,

@@ -25,5 +25,5 @@ class MyColors {
 }
 
 extension CustomColorScheme on ColorScheme{
-  Color get prupleFg => MyColors.purple;
+  Color get purpleFg => brightness == Brightness.dark ? MyColors.purpleAccent : MyColors.purple;
 }
